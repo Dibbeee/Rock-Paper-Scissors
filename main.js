@@ -15,6 +15,7 @@ function game() {
       computerScore++;
     }
     console.log(`PlayerScore: ${playerScore} \t ComputerScore: ${computerScore}`);
+    console.log('-------------------------------------');
   }
   console.log("Game Over!");
   if (playerScore > computerScore) {
@@ -28,7 +29,7 @@ function game() {
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     roundWinner = "Tie!";
-    return "Tie!";
+    return "Tie! The score stays the same!";
   }
 
   if (
