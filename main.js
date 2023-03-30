@@ -48,8 +48,6 @@ function getComputerChoice() {
   }
 }
 
-
-
 // JS for the UI
 
 const rock_btn = document.querySelector(".rock__btn");
@@ -60,6 +58,8 @@ const computerScorePara = document.querySelector(".computerScorePara");
 const scoreInfo = document.querySelector(".scoreInfo");
 const showScore = document.querySelector(".showScore");
 const scoreMessage = document.querySelector(".scoreMessage");
+const hiddenDiv = document.querySelector(".hiddenDiv");
+const overlay = document.querySelector(".overlay");
 
 rock_btn.addEventListener("click", () => clickEvent("Rock"));
 paper_btn.addEventListener("click", () => clickEvent("Paper"));
@@ -69,6 +69,9 @@ function clickEvent(playerSelection) {
   const computerSelection = getComputerChoice();
   playRound(playerSelection, computerSelection);
   updateScore();
+  if(gameOver()){
+    openRestartMenu()
+  }
 }
 
 function updateScore() {
@@ -94,3 +97,11 @@ function updateScoreMessage(winner, playerSelection, computerSelection) {
   }
 }
 
+function gameOver() {
+  return playerScore === 5 || computerScore === 5;
+}
+
+function openRestartMenu() {
+  hiddenDiv.classList.add("active");
+  overlay.classList.add("active");
+}
