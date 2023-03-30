@@ -5,6 +5,10 @@
   --background: #AFCBD9
 }
 
+*{
+    border: 1px solid red;
+}
+
 *,
 ::before,
 ::after {
@@ -40,7 +44,7 @@ html {
 }
 
 .main{
-    height: 35vh;
+    height: 45vh;
     background: var(--background);
 }
 
@@ -48,7 +52,7 @@ html {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    gap: 10px;
+    gap: 30px;
 }
 
 .all__btn{

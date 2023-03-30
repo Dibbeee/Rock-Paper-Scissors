@@ -1,3 +1,6 @@
+
+// JS for Game
+
 let computerScore = 0;
 let playerScore = 0;
 let roundWinner = "";
@@ -71,8 +74,10 @@ function getPlayerChoice() {
   return choiceInLower;
 }
 
-// game();
+game();
 
 const rock_btn = document.querySelector(".rock__btn");
 const paper_btn = document.querySelector(".paper__btn");
 const scissors_btn = document.querySelector(".scissors__btn");
+const playerScorePara = document.querySelector(".playerScorePara");
+const computerScorePara = document.querySelector(".playerScorePara");
