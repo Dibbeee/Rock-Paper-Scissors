@@ -69,4 +69,4 @@ function getPlayerChoice() {
   return choiceInLower;
 }
 
-game();
+// game();

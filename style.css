@@ -1,0 +1,40 @@
+:root {
+  --Header-Gradient: linear-gradient(to left, #797ef6, #4adede);
+  
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+  background: var(--Header-Gradient);
+  height: 15vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title{
+font-size: 2.5rem;
+text-align: center;
+padding-bottom: 25px;
+}
+
+.game__title {
+font-size: 1.5rem;
+text-align: center;
+}
+
+
