@@ -1,13 +1,13 @@
 :root {
   --Header_Gradient: linear-gradient(to left, #797ef6, #4adede);
-  --button_color: linear-gradient(to left, #7dcfb6, #507A75);
+  --button_color: linear-gradient(to left, #7dcfb6, #507a75);
   --btn_fontSize: 1.5rem;
-  --background: #AFCBD9
+  --background: #afcbd9;
 }
 
-*{
+/* *{
     border: 1px solid red;
-}
+} */
 
 *,
 ::before,
@@ -17,7 +17,7 @@
   margin: 0;
 }
 
-html {
+body {
   position: relative;
   min-height: 100%;
   font-family: "Courier New", Courier, monospace;
@@ -43,30 +43,89 @@ html {
   text-align: center;
 }
 
-.main{
-    height: 45vh;
-    background: var(--background);
+.main {
+  height: 85vh;
+  background: var(--background);
 }
 
-.scoreboard{
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    gap: 30px;
+.scoreInfo {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 1.5rem;
 }
 
-.all__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+.scoreMessage {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.3rem;
 }
 
-.btn{
-    width: 180px;
-    height: 180px;
+.showScore {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 40px 0;
+  gap: 30px;
+}
+
+.all__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.btn {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  padding: 10px;
+  background: var(--button_color);
+  font-size: var(--btn_fontSize);
+  color: whitesmoke;
+}
+
+
+
+
+
+
+
+/* testing */
+.hiddenDiv{
+    z-index: 1;
+    background: rgb(95, 94, 94);
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+}
+
+.hiddenDiv.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.endGameMsg, .baitBtn{color: blue;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: wheat;
+}
+
+.endGameMsg{
+    padding-top: 30px;
+    font-size: 3rem;
+}
+
+.baitBtn{
+    background: rgb(26, 25, 25);
     padding: 10px;
-    background: var(--button_color);
-    font-size: var(--btn_fontSize);
-    color: whitesmoke;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
