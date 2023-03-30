@@ -14,8 +14,10 @@ function game() {
     if (roundWinner == "computer") {
       computerScore++;
     }
-    console.log(`PlayerScore: ${playerScore} \t ComputerScore: ${computerScore}`);
-    console.log('-------------------------------------');
+    console.log(
+      `PlayerScore: ${playerScore} \t ComputerScore: ${computerScore}`
+    );
+    console.log("-------------------------------------");
   }
   console.log("Game Over!");
   if (playerScore > computerScore) {
@@ -70,3 +72,7 @@ function getPlayerChoice() {
 }
 
 // game();
+
+const rock_btn = document.querySelector(".rock__btn");
+const paper_btn = document.querySelector(".paper__btn");
+const scissors_btn = document.querySelector(".scissors__btn");

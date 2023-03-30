@@ -1,6 +1,8 @@
 :root {
-  --Header-Gradient: linear-gradient(to left, #797ef6, #4adede);
-  
+  --Header_Gradient: linear-gradient(to left, #797ef6, #4adede);
+  --button_color: linear-gradient(to left, #7dcfb6, #507A75);
+  --btn_fontSize: 1.5rem;
+  --background: #AFCBD9
 }
 
 *,
@@ -14,11 +16,11 @@
 html {
   position: relative;
   min-height: 100%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .header {
-  background: var(--Header-Gradient);
+  background: var(--Header_Gradient);
   height: 15vh;
   position: relative;
   display: flex;
@@ -26,15 +28,41 @@ html {
   align-items: center;
 }
 
-.header__title{
-font-size: 2.5rem;
-text-align: center;
-padding-bottom: 25px;
+.header__title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 .game__title {
-font-size: 1.5rem;
-text-align: center;
+  font-size: 2rem;
+  text-align: center;
 }
 
+.main{
+    height: 35vh;
+    background: var(--background);
+}
 
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.all__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.btn{
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    background: var(--button_color);
+    font-size: var(--btn_fontSize);
+    color: whitesmoke;
+}
